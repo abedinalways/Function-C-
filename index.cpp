@@ -92,23 +92,61 @@
 //   return 0;
 // }
 // calculate nCr binomial coefficient  for n & r
+// #include <iostream>
+// using namespace std;
+// int factorial(int n){
+//   int fact = 1;
+//   for (int i = 1; i <= n; i++){
+//     fact *= i;
+//   }
+//   return fact;
+// }
+// int nCr(int n, int r){
+//   int fact_n = factorial(n);
+//   int fact_r = factorial(r);
+//   int fact_nmr = factorial(n-r);
+//   return fact_n / fact_r * fact_nmr;
+// }
+// int main(){
+//   int n = 4, r = 2;
+//   cout << nCr(n, r) << endl;
+//   return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int prime(int n){
+//   int count = 1;
+//   int sum = 0;
+//   while(count<=n){
+//     sum += count;
+//     count++;
+//   }
+//   return sum;
+// }
+// int main(){
+//   int n = 6;
+//   cout << prime(n) << endl;
+//   return 0;
+// }
+// is a number prime or not
 #include <iostream>
 using namespace std;
-int factorial(int n){
-  int fact = 1;
-  for (int i = 1; i <= n; i++){
-    fact *= i;
-  }
-  return fact;
-}
-int nCr(int n, int r){
-  int fact_n = factorial(n);
-  int fact_r = factorial(r);
-  int fact_nmr = factorial(n-r);
-  return fact_n / fact_r * fact_nmr;
-}
+
 int main(){
-  int n = 4, r = 2;
-  cout << nCr(n, r) << endl;
-  return 0;
-}
+  int num=251;
+  int count = 0;
+  for (int i = 2; i <= num - 1; i++){
+    if(num%i==0){
+      count++;
+    }
+  }
+  if(count==1){
+      cout << "prime number";
+    }
+    else{
+      cout << "non-prime number";
+    }
+    cout << endl;
+    return 0;
+  }
